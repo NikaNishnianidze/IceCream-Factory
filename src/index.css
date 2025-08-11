@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-mb: 375px;
+  --breakpoint-tb: 768px;
+  --breakpoint-dk: 1440px;
+}
+
+.log {
+  background: linear-gradient(180deg, #036073 0%, #05b4d9 100%);
+}

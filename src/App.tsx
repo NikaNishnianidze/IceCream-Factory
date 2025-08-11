@@ -3,6 +3,7 @@ import Header from "./Components/Header";
 import { useMediaQuery } from "react-responsive";
 import LoginSystem from "./Components/LoginSystem";
 import BlackBox from "./Components/BlackBox";
+import Catalogue from "./Components/Catalogue";
 
 function App() {
   const isDesktop = useMediaQuery({ minWidth: 1440 });
@@ -12,6 +13,7 @@ function App() {
       <Header />
       <LoginSystem />
       <BlackBox />
+      <Catalogue />
     </div>
   );
 }

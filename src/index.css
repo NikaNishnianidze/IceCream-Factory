@@ -9,3 +9,7 @@
 .log {
   background: linear-gradient(180deg, #036073 0%, #05b4d9 100%);
 }
+
+body {
+  background-color: #f8e7f3;
+}

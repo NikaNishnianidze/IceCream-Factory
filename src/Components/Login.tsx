@@ -2,16 +2,18 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm, type SubmitHandler } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import * as yup from "yup";
+import { useRoleContext } from "../Context/RoleContext";
+import { useState } from "react";
 
 interface Inputs {
   email: string;
   password: string;
 }
-export default function Register() {
+
+export default function Login() {
   const navigate = useNavigate();
-  const handleLogin = () => {
-    navigate("/enter/login");
-  };
+  const [error, setError] = useState<string>("");
+  const { role } = useRoleContext();
   const schema = yup
     .object({
       email: yup
@@ -28,6 +30,7 @@ export default function Register() {
   } = useForm<Inputs>({
     resolver: yupResolver(schema),
   });
+
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     let users = [];
     try {
@@ -37,36 +40,51 @@ export default function Register() {
     } catch {
       users = [];
     }
-    users.push({ email: data.email, password: data.password });
-    localStorage.setItem("users", JSON.stringify(users));
-    navigate("/enter/login");
+    const foundUser = users.find(
+      (user: { email: string; password: string }) =>
+        user.email === data.email && user.password === data.password
+    );
+    if (foundUser) {
+      if (role === "მენეჯერი") {
+        navigate("/enter/manager");
+      } else if (role === "ადმინისტრატორი") {
+        navigate("/enter/admin");
+      } else if (role === "დისტრიბუტორი") {
+        navigate("/enter/distributor");
+      } else if (role === "გაყიდვების გუნდი") {
+        navigate("/enter/sales-team");
+      }
+    } else {
+      setError("Email Or PassWord Is Incorrect");
+    }
   };
   return (
     <div className="flex flex-col items-center mt-[145px]">
-      <h2 className="mt-[147px] text-[#04AED2] text-[50px] font-normal">
-        რეგისტრაცია
-      </h2>
+      <h2 className="text-[40px] text-[#04AED2] font-normal">შესვლა</h2>
       <p className="text-[14px] text-[#003A46] font-normal">
         ან{" "}
-        <span className="font-bold" onClick={() => handleLogin()}>
-          გაიარე ავტორიზაცია
+        <span
+          onClick={() => navigate("/enter/register")}
+          className="font-bold cursor-pointer"
+        >
+          დარეგისტრირდი
         </span>
       </p>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="mt-[41px] flex flex-col items-center"
+        className="flex flex-col items-center mt-[41px]"
       >
-        <div className="email flex flex-col ">
+        <div className="email flex flex-col">
           <label className="text-[14px] text-[#003A46] font-normal">
             ელ-ფოსტა
           </label>
           <input
             type="email"
             {...register("email")}
-            className="border border-[#04AED2] rounded-lg w-[379px] h-[40px] px-2"
+            className="w-[400px] h-[50px] border border-[#04AED2] rounded-[5px] px-3 mt-2"
           />
           {errors.email && (
-            <p className="text-red-500 text-xs">{errors.email.message}</p>
+            <p className="text-red-500 text-sm">{errors.email.message}</p>
           )}
         </div>
         <div className="password flex flex-col mt-[17px]">
@@ -76,17 +94,18 @@ export default function Register() {
           <input
             type="password"
             {...register("password")}
-            className="border border-[#04AED2] rounded-lg w-[379px] h-[40px] px-2"
+            className="w-[400px] h-[50px] border border-[#04AED2] rounded-[5px] px-3 mt-2"
           />
           {errors.password && (
-            <p className="text-red-500 text-xs">{errors.password.message}</p>
+            <p className="text-red-500 text-sm">{errors.password.message}</p>
           )}
         </div>
+        {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
         <button
           type="submit"
-          className="mt-[57px] w-[165px] py-[12px] rounded-[8px] bg-[#04AED2] text-white text-[14px] font-black"
+          className="w-[111px] py-[12px] text-white font-black text-[14px] bg-[#04AED2] rounded-[8px] mt-[57px] cursor-pointer hover:bg-[#028B9A] transition duration-300"
         >
-          რეგისტრაცია
+          შესვლა
         </button>
       </form>
     </div>

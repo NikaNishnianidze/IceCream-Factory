@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RoleHeader from "./Components/RoleHeader.tsx";
 import RoleProvider from "./Context/RoleContext";
 import Register from "./Components/Register.tsx";
+import Login from "./Components/Login.tsx";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: "/enter/register",
         element: <Register />,
+      },
+      {
+        path: "/enter/login",
+        element: <Login />,
       },
     ],
   },

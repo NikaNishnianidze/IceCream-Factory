@@ -4,6 +4,7 @@ import { useMediaQuery } from "react-responsive";
 import LoginSystem from "./Components/LoginSystem";
 import BlackBox from "./Components/BlackBox";
 import Catalogue from "./Components/Catalogue";
+import History from "./Components/History";
 
 function App() {
   const isDesktop = useMediaQuery({ minWidth: 1440 });
@@ -14,6 +15,7 @@ function App() {
       <LoginSystem />
       <BlackBox />
       <Catalogue />
+      <History />
     </div>
   );
 }

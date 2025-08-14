@@ -9,6 +9,9 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
   },
+  {
+    path: "/role",
+  },
 ]);
 
 createRoot(document.getElementById("root")!).render(

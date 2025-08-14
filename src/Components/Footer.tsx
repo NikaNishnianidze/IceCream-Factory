@@ -4,17 +4,17 @@ import contacticon from "../../public/assets/contacticon.svg";
 import locationicon from "../../public/assets/locationIcon.svg";
 export default function Footer() {
   return (
-    <div className="w-full px-[15px] py-[30px] bg-[#0F0F0F] mt-[92px]">
-      <div className="maindiv mb:flex mb:flex-col mb:gap-[65px] dk:flex-row">
+    <div className="w-full px-[15px] py-[30px] bg-[#0F0F0F] mt-[92px] dk:px-[80px]">
+      <div className="maindiv mb:flex mb:flex-col mb:gap-[65px] dk:flex-row dk:justify-between">
         <div className="titles mb:flex mb:flex-col mb:items-start mb:gap-[10px]">
           <img src={logo} alt="glase logo" />
-          <p className="mt-[10px] w-[278px] text-[#C7C7C7] text-[14px] font-normal">
+          <p className="mt-[10px] w-[278px] text-[#C7C7C7] text-[14px] font-normal dk:w-[416px]">
             ჩვენ ვქმნით ნაყინის უნიკალურ გამოცდილებას — ყოველ ქილაში ახალი გემო
             და სიხარულია. იყავით პირველები, ვინც გაიგებს ჩვენს სიახლეებს და
             სპეციალურ შეთავაზებებს.
           </p>
         </div>
-        <div className="contacts mb:flex mb:flex-col mb:items-start gap-[27px]">
+        <div className="contacts mb:flex mb:flex-col mb:items-start dk:flex-row dk:items-start gap-[27px] dk:gap-[96px]">
           <div className="follow flex flex-col">
             <p className="text-[18px] font-normal text-[#FFFFFF]">
               გამოგვყევით
@@ -52,11 +52,15 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="divider h-[1px] w-[356px] bg-white mt-[42px]"></div>
-      <div className="lastline flex flex-row justify-between items-center mt-[25px] text-[12px] text-[#C7C7C7] font-normal">
-        <p>მხარდაჭერა</p>
-        <p>სერვისები</p>
-        <p>წესები და პირობები</p>
+      <div className="flex flex-col items-center w-full">
+        <div className="divider h-[1px] w-[356px] bg-white mt-[42px] dk:w-[90%] mb:w-[90%]"></div>
+      </div>
+      <div className="dk:w-full dk:flex dk:justify-end">
+        <div className="lastline mb:flex mb:flex-row mb:justify-between mb:items-center mt-[25px] text-[12px] text-[#C7C7C7] font-normal dk:w-[349px] dk:justify-between">
+          <p>მხარდაჭერა</p>
+          <p>სერვისები</p>
+          <p>წესები და პირობები</p>
+        </div>
       </div>
     </div>
   );

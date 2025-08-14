@@ -6,6 +6,7 @@ import BlackBox from "./Components/BlackBox";
 import Catalogue from "./Components/Catalogue";
 import History from "./Components/History";
 import Locations from "./Components/Locations";
+import Footer from "./Components/Footer";
 
 function App() {
   const isDesktop = useMediaQuery({ minWidth: 1440 });
@@ -18,6 +19,7 @@ function App() {
       <Catalogue />
       <History />
       <Locations />
+      <Footer />
     </div>
   );
 }

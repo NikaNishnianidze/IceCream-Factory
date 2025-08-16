@@ -4,6 +4,7 @@ import ManagerMain from "./ManagerMain";
 import Production from "./Production";
 import Inventar from "./Inventar";
 import { useNavigate } from "react-router-dom";
+import ChangeStatus from "./ChangeStatus";
 
 export default function Manager() {
   const [options, setOptions] = useState<string>("მთავარი");
@@ -55,6 +56,7 @@ export default function Manager() {
           {options === "მთავარი" && <ManagerMain />}
           {options === "წარმოება" && <Production />}
           {options === "ინვენტარი" && <Inventar />}
+          {options === "სტატუსი" && <ChangeStatus />}
         </div>
       </div>
     </div>

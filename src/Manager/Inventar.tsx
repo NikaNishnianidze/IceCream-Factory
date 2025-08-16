@@ -2,7 +2,7 @@ import ingredientData from "../Datas/ManagerData/ingredients.json";
 import plusIcon from "../../public/assets/plusIcon.svg";
 import { useState } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { set, useForm, type SubmitHandler } from "react-hook-form";
+import { useForm, type SubmitHandler } from "react-hook-form";
 import * as yup from "yup";
 import addIcon from "../../public/assets/addIcon.svg";
 import closeIcon from "../../public/assets/closeIcon.svg";
@@ -82,7 +82,7 @@ export default function Inventar() {
                         : item.status === "შესავსები"
                         ? "#FFF70F"
                         : item.status === "კრიტიკული"
-                        ? "##FF0000"
+                        ? "#FF0000"
                         : "",
                   }}
                 >

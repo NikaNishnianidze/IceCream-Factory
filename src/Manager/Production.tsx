@@ -1,6 +1,5 @@
 import { useState } from "react";
 import data from "../Datas/ManagerData/production.json";
-import type { TProduction } from "../Types/managerTypes/production";
 
 export default function Production() {
   const [details, setDetails] = useState<boolean>(false);

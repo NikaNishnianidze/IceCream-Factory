@@ -3,18 +3,18 @@
     "name": "რძე",
     "status": "საკმარისია",
     "expirationDate": "4 დღე",
-    "quantity": 200
+    "quantity": "200ლ"
   },
   {
     "name": "შაქარი",
     "status": "შესავსები",
     "expirationDate": "1 დღე",
-    "quantity": 50
+    "quantity": "50კგ"
   },
   {
     "name": "არომატიზატორი (მარწყვი)",
     "status": "კრიტიკული",
     "expirationDate": "<1 დღე",
-    "quantity": 10
+    "quantity": "10ლ"
   }
 ]

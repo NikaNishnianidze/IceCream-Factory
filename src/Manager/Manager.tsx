@@ -3,12 +3,17 @@ import homeIcon from "../../public/assets/homeIcon.svg";
 import ManagerMain from "./ManagerMain";
 import Production from "./Production";
 import Inventar from "./Inventar";
+import { useNavigate } from "react-router-dom";
 
 export default function Manager() {
   const [options, setOptions] = useState<string>("მთავარი");
+  const navigate = useNavigate();
   return (
     <div className="px-[65px] flex flex-col items-center mt-[65px] ">
-      <div className="dashboard flex items-center gap-[7px] w-full">
+      <div
+        onClick={() => navigate("/")}
+        className="dashboard flex items-center gap-[7px] w-full cursor-pointer"
+      >
         <img src={homeIcon} alt="home icon" />
         <p className="text-[14px] text-[#04A4C5] font-normal">დაფა</p>
       </div>

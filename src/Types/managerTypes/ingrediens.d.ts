@@ -2,7 +2,7 @@ interface IIngredient {
   name: string;
   status: string;
   expirationDate: string;
-  quantity: number;
+  quantity: string;
 }
 
 export type TIngredient = IIngredient[];

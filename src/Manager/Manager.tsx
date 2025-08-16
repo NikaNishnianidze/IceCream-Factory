@@ -2,6 +2,7 @@ import { useState } from "react";
 import homeIcon from "../../public/assets/homeIcon.svg";
 import ManagerMain from "./ManagerMain";
 import Production from "./Production";
+import Inventar from "./Inventar";
 
 export default function Manager() {
   const [options, setOptions] = useState<string>("მთავარი");
@@ -48,6 +49,7 @@ export default function Manager() {
         <div className="content">
           {options === "მთავარი" && <ManagerMain />}
           {options === "წარმოება" && <Production />}
+          {options === "ინვენტარი" && <Inventar />}
         </div>
       </div>
     </div>

@@ -1,11 +1,12 @@
 import { useState } from "react";
 import homeIcon from "../../public/assets/homeIcon.svg";
+import ManagerMain from "./ManagerMain";
 
 export default function Manager() {
   const [options, setOptions] = useState<string>("მთავარი");
   return (
-    <div className="px-[65px] flex flex-col items-center mt-[65px] w-[13%]">
-      <div className="dashboard flex items-center gap-[7px]">
+    <div className="px-[65px] flex flex-col items-center mt-[65px] ">
+      <div className="dashboard flex items-center gap-[7px] w-full">
         <img src={homeIcon} alt="home icon" />
         <p className="text-[14px] text-[#04A4C5] font-normal">დაფა</p>
       </div>
@@ -43,7 +44,9 @@ export default function Manager() {
             სტატუსების განახლება
           </p>
         </div>
-        <div className="content"></div>
+        <div className="content">
+          {options === "მთავარი" && <ManagerMain />}
+        </div>
       </div>
     </div>
   );

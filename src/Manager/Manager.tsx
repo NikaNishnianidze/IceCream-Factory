@@ -1,6 +1,7 @@
 import { useState } from "react";
 import homeIcon from "../../public/assets/homeIcon.svg";
 import ManagerMain from "./ManagerMain";
+import Production from "./Production";
 
 export default function Manager() {
   const [options, setOptions] = useState<string>("მთავარი");
@@ -46,6 +47,7 @@ export default function Manager() {
         </div>
         <div className="content">
           {options === "მთავარი" && <ManagerMain />}
+          {options === "წარმოება" && <Production />}
         </div>
       </div>
     </div>

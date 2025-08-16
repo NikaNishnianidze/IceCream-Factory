@@ -3,7 +3,7 @@ import { useRoleContext } from "../Context/RoleContext";
 
 export default function DesktopHeader() {
   const navigate = useNavigate();
-  const { role, setRole } = useRoleContext();
+  const { setRole } = useRoleContext();
   const handleRoleClick = (newRole: string) => {
     setRole(newRole);
     navigate(`/enter/register`);

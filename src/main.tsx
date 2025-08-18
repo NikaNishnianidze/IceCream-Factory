@@ -8,6 +8,7 @@ import RoleProvider from "./Context/RoleContext";
 import Register from "./Components/Register.tsx";
 import Login from "./Components/Login.tsx";
 import Manager from "./Manager/Manager.tsx";
+import Administrator from "./Administrator/Administrator.tsx";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: "/enter/manager",
         element: <Manager />,
+      },
+      {
+        path: "/enter/admin",
+        element: <Administrator />,
       },
     ],
   },

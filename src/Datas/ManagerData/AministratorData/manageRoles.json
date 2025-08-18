@@ -2,26 +2,36 @@
   {
     "name": "გიორგი",
     "role": "მენეჯერი",
-    "status:": "აქტიური"
+    "status": "აქტიური",
+    "email": "example@gmail.com",
+    "mobile": "557992971"
   },
   {
     "name": "ნიკა",
     "role": "დისტრიბუტორი",
-    "status:": "გასული"
+    "status": "გასული",
+    "email": "example@gmail.com",
+    "mobile": "557992977"
   },
   {
     "name": "ნინი",
     "role": "გაყიდვები",
-    "status:": "გასული"
+    "status": "გასული",
+    "email": "example@gmail.com",
+    "mobile": "557992971"
   },
   {
     "name": "ნინი",
     "role": "გაყიდვები",
-    "status:": "გასული"
+    "status": "გასული",
+    "email": "example@gmail.com",
+    "mobile": "557992971"
   },
   {
     "name": "ნინი",
     "role": "გაყიდვები",
-    "status:": "გასული"
+    "status": "გასული",
+    "email": "example@gmail.com",
+    "mobile": "557992971"
   }
 ]

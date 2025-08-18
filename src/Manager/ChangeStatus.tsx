@@ -80,7 +80,7 @@ export default function ChangeStatus() {
               </div>
             </div>
 
-            <div className="divider w-[767] h-[1px] bg-[#E0E6ED]/40 mt-[11px] mb-[15px]"></div>
+            <div className="divider w-[767px] h-[1px] bg-[#E0E6ED]/40 mt-[11px] mb-[15px]"></div>
           </div>
         ))}
       </div>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import homeIcon from "../../public/assets/homeIcon.svg";
 import Main from "./Main";
+import ManageRoles from "./ManageRoles";
 
 export default function Administrator() {
   const [chosenOption, setChosenOption] = useState<string>("მთავარი");
@@ -82,6 +83,7 @@ export default function Administrator() {
         </div>
         <div className="right-side">
           {chosenOption === "მთავარი" && <Main />}
+          {chosenOption === "როლების-მართვა" && <ManageRoles />}
         </div>
       </div>
     </div>

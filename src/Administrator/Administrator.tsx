@@ -3,6 +3,7 @@ import homeIcon from "../../public/assets/homeIcon.svg";
 import Main from "./Main";
 import ManageRoles from "./ManageRoles";
 import SystemSettings from "./SystemSettings";
+import Statistics from "./Statistics";
 
 export default function Administrator() {
   const [chosenOption, setChosenOption] = useState<string>("მთავარი");
@@ -86,6 +87,7 @@ export default function Administrator() {
           {chosenOption === "მთავარი" && <Main />}
           {chosenOption === "როლების-მართვა" && <ManageRoles />}
           {chosenOption === "სისტემის-პარამეტრები" && <SystemSettings />}
+          {chosenOption === "ანგარიშგება-სტატისტიკა" && <Statistics />}
         </div>
       </div>
     </div>

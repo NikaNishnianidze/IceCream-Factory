@@ -34,15 +34,14 @@ export default function ManageRoles() {
                 <p className="flex justify-center w-[118px] ml-[96px] text-white text-[14px] font-normal">
                   {item.role}
                 </p>
-                <div className="contacte flex flex-row items-center justify-center gap-[4px] ml-[127px] cursor-pointer">
-                  <img
-                    src={phoneIcon}
-                    alt="phone icon"
-                    onClick={() => {
-                      handleOpen(index);
-                      setMobileModal(true);
-                    }}
-                  />
+                <div
+                  onClick={() => {
+                    handleOpen(index);
+                    setMobileModal(true);
+                  }}
+                  className="contacte flex flex-row items-center justify-center gap-[4px] ml-[127px] cursor-pointer"
+                >
+                  <img src={phoneIcon} alt="phone icon" />
                   <img src={messageIcon} alt="message icon" />
                 </div>
                 <div className="status flex items-center gap-[4px] ml-[161px]">

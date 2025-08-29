@@ -1,0 +1,38 @@
+[
+  {
+    "orderNumber": "#1201",
+    "product": "ვანილის ნაყინი",
+    "fullName": "ნინო  გოგია",
+    "status": "მიტანილია",
+    "email": "ninogogia@company.com",
+    "phone": "+995 599 12 34 56",
+    "role": "კლიენტი"
+  },
+  {
+    "orderNumber": "#1202",
+    "product": "შოკოლადის ნაყინი",
+    "fullName": "გიორგი ნიკოლაძე",
+    "status": "მიღებულია",
+    "email": "giorginikoladze@company.com",
+    "phone": "+995 599 12 34 56",
+    "role": "კლიენტი"
+  },
+  {
+    "orderNumber": "#1203",
+    "product": "მარწყვის ნაყინი",
+    "fullName": "მაია აბრამიშვილი",
+    "status": "გადაგზავნილი",
+    "email": "maiaabramishvili@company.com",
+    "phone": "+995 599 12 34 56",
+    "role": "კლიენტი"
+  },
+  {
+    "orderNumber": "#1204",
+    "product": "მარწყვის ნაყინი",
+    "fullName": "მაია აბრამიშვილი",
+    "status": "გადაგზავნილი",
+    "email": "maiaabramishvili@company.com",
+    "phone": "+995 599 12 34 56",
+    "role": "დამუშავება"
+  }
+]

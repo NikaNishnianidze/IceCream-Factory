@@ -4,6 +4,7 @@ import Main from "./Main";
 import ManageRoles from "./ManageRoles";
 import SystemSettings from "./SystemSettings";
 import Statistics from "./Statistics";
+import Orders from "./Orders";
 
 export default function Administrator() {
   const [chosenOption, setChosenOption] = useState<string>("მთავარი");
@@ -88,6 +89,7 @@ export default function Administrator() {
           {chosenOption === "როლების-მართვა" && <ManageRoles />}
           {chosenOption === "სისტემის-პარამეტრები" && <SystemSettings />}
           {chosenOption === "ანგარიშგება-სტატისტიკა" && <Statistics />}
+          {chosenOption === "შეკვეთების-მართვა" && <Orders />}
         </div>
       </div>
     </div>

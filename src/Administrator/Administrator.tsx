@@ -6,12 +6,17 @@ import SystemSettings from "./SystemSettings";
 import Statistics from "./Statistics";
 import Orders from "./Orders";
 import Ingredients from "./Ingredients";
+import { useNavigate } from "react-router-dom";
 
 export default function Administrator() {
+  const navigate = useNavigate();
   const [chosenOption, setChosenOption] = useState<string>("მთავარი");
   return (
     <div className="flex flex-col mt-[72px] px-[65px]">
-      <div className="dashboard flex items-center gap-[7px]">
+      <div
+        onClick={() => navigate("/")}
+        className="dashboard flex items-center gap-[7px]"
+      >
         <img src={homeIcon} alt="home Icon" />
         <p className="text-[14px] text-[#04A4C5] font-semibold">დაფა</p>
       </div>

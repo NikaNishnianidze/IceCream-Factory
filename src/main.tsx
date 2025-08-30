@@ -9,6 +9,7 @@ import Register from "./Components/Register.tsx";
 import Login from "./Components/Login.tsx";
 import Manager from "./Manager/Manager.tsx";
 import Administrator from "./Administrator/Administrator.tsx";
+import Distributor from "./Distributor/Distributor.tsx";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: "/enter/admin",
         element: <Administrator />,
+      },
+      {
+        path: "/enter/distributor",
+        element: <Distributor />,
       },
     ],
   },

@@ -5,7 +5,7 @@ import Main from "./Main";
 
 export default function Distributor() {
   const navigate = useNavigate();
-  const [chosenOption, setChosenOption] = useState<string>("");
+  const [chosenOption, setChosenOption] = useState<string>("მთავარი");
   return (
     <div className="px-[60px] mt-[64px] flex flex-col">
       <div

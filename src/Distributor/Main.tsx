@@ -68,9 +68,17 @@ export default function Main() {
       {seeDetailsModal && (
         <div className="fixed inset-0 bg-black/20 backdrop-blur-sm flex items-center justify-center z-50">
           <div className="w-[369px] p-[20px] rounded-[12px] bg-[#003A46] flex flex-col gap-[17px]">
-            <p className="text-[18px] text-white font-semibold">
-              შეკვეთის ინფორმაცია
-            </p>
+            <div className="firstline flex flexa-row items-center justify-between">
+              <p className="text-[18px] text-white font-semibold">
+                შეკვეთის ინფორმაცია
+              </p>
+              <p
+                onClick={() => setSeeDetailsModal(false)}
+                className="text-[18px] font-bold text-white"
+              >
+                x
+              </p>
+            </div>
             <div className="address mt-[7px] flex flex-col gap-[5px]">
               <p className="text-[16px] font-bold text-white">მისამართი</p>
               <p className="text-[14px] text-white/80 font-normal">

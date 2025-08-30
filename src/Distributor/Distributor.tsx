@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import homeIcon from "../../public/assets/homeIcon.svg";
 import { useState } from "react";
 import Main from "./Main";
+import OrderWork from "./OrderWork";
 
 export default function Distributor() {
   const navigate = useNavigate();
@@ -58,6 +59,7 @@ export default function Distributor() {
         </div>
         <div className="main-content">
           {chosenOption === "მთავარი" && <Main />}
+          {chosenOption === "მიწოდების-დავალებები" && <OrderWork />}
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import { useReducer, useState } from "react";
+import { useState } from "react";
 import logo from "../../public/assets/glaselogo.svg";
 import shopicon from "../../public/assets/shoplogo.svg";
 import { useRoleContext } from "../Context/RoleContext";
@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 export default function Header() {
   const navigate = useNavigate();
   const [roleModal, setRoleModal] = useState<boolean>(false);
-  const { role, setRole } = useRoleContext();
+  const { setRole } = useRoleContext();
   const handleRoleClick = (newRole: string) => {
     setRole(newRole);
     navigate("/enter/register");

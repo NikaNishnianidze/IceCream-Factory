@@ -2,8 +2,18 @@ import icecream1 from "../../public/assets/icecream1.png";
 import icecream2 from "../../public/assets/icecream2.png";
 import icecream1dk from "../../public/assets/41fa785d968940164f12309fd24dcf99594c334f.png";
 import icecream2dk from "../../public/assets/e2043bb94ac327225932e065745db91eb0aeba65.png";
+import { useState } from "react";
+import { useRoleContext } from "../Context/RoleContext";
+import { useNavigate } from "react-router-dom";
 
 export default function LoginSystem() {
+  const navigate = useNavigate();
+  const [roleModal, setRoleModal] = useState<boolean>(false);
+  const { setRole } = useRoleContext();
+  const handleRoleClick = (newRole: string) => {
+    setRole(newRole);
+    navigate("/enter/register");
+  };
   return (
     <div className="flex flex-col items-center pl-[15px] mt-[67px]">
       <div className="mobile-design  mb:block dk:hidden">
@@ -42,7 +52,10 @@ export default function LoginSystem() {
             თბილ ისტორიასაც მოგიყვება — ბუნებრივი ინგრედიენტებით და სიყვარულით
             შექმნილი.
           </p>
-          <div className="login mt-[38.4px] flex items-center justify-start">
+          <div
+            onClick={() => setRoleModal(true)}
+            className="login mt-[38.4px] flex items-center justify-start"
+          >
             <button className="w-[231px] rounded-[8px] border-[1px] border-[#04AED2] py-[19.5px] text-[#04AED2] text-[16px] font-black cursor-pointer">
               შესვლა სისტემაში
             </button>
@@ -63,6 +76,37 @@ export default function LoginSystem() {
           </div>
         </div>
       </div>
+      {roleModal && (
+        <div className="fixed inset-0 bg-black/20 backdrop-blur-sm flex items-center justify-center z-50">
+          <div className="w-[351px] p-[20px] rounded-[12px] bg-[#001519] flex flex-col">
+            <p className="text-white text-[14px] font-black">თქვენი როლი?</p>
+            <div
+              onClick={() => handleRoleClick("მენეჯერი")}
+              className="manager text-[14px] text-white font-normal cursor-pointer mt-[17px] w-[311px] py-[6px] px-[10px] border-[1px] rounded-[6px] border-[#04AED2]"
+            >
+              მენეჯერი
+            </div>
+            <div
+              onClick={() => handleRoleClick("ადმინისტრატორი")}
+              className="administrator text-[14px] text-white font-normal cursor-pointer mt-[17px] w-[311px] py-[6px] px-[10px] border-[1px] rounded-[6px] border-[#04AED2]"
+            >
+              ადმინისტრატორი
+            </div>
+            <div
+              onClick={() => handleRoleClick("დისტრიბუტორი")}
+              className="distributor text-[14px] text-white font-normal cursor-pointer mt-[17px] w-[311px] py-[6px] px-[10px] border-[1px] rounded-[6px] border-[#04AED2]"
+            >
+              დისტრიბუტორი
+            </div>
+            <div
+              onClick={() => handleRoleClick("გაყიდვების გუნდი")}
+              className="sales-team text-[14px] text-white font-normal cursor-pointer mt-[17px] w-[311px] py-[6px] px-[10px] border-[1px] rounded-[6px] border-[#04AED2]"
+            >
+              გაყიდვების გუნდი
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

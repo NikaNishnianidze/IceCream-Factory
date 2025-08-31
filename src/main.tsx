@@ -10,6 +10,7 @@ import Login from "./Components/Login.tsx";
 import Manager from "./Manager/Manager.tsx";
 import Administrator from "./Administrator/Administrator.tsx";
 import Distributor from "./Distributor/Distributor.tsx";
+import SalesTeam from "./sellingTeam/SalesTeam.tsx";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: "/enter/distributor",
         element: <Distributor />,
+      },
+      {
+        path: "/enter/sales-team",
+        element: <SalesTeam />,
       },
     ],
   },

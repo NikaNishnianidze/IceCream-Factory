@@ -1,6 +1,6 @@
 import orderWorkData from "../Datas/ManagerData/Distributor/orderWork.json";
 import searchIcon from "../../public/assets/searchIcon.svg";
-import { use, useState } from "react";
+import { useState } from "react";
 
 export default function OrderWork() {
   const [chosenIndex, setChosenIndex] = useState<number>(0);

@@ -43,19 +43,6 @@ export default function Distributor() {
           >
             მიწოდების დავალებები
           </p>
-          <div className="divider w-[232px] mt-[7px] h-[1px] bg-[#F8E7F3]"></div>
-          <p
-            onClick={() => setChosenOption("რუკა")}
-            className="text-[14px] font-normal ml-[21px] cursor-pointer"
-            style={{
-              color:
-                chosenOption === "რუკა"
-                  ? "#FFFFFF"
-                  : "rgba(255, 255, 255, 0.80)",
-            }}
-          >
-            რუკა
-          </p>
         </div>
         <div className="main-content">
           {chosenOption === "მთავარი" && <Main />}
